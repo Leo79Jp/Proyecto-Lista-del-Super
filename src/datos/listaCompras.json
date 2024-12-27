@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "nombre": "leche",
+      "estado": true
+    },
+    {
+      "id": 2,
+      "nombre": "yerba",
+      "estado": true
+    }
+
+  ]
+  

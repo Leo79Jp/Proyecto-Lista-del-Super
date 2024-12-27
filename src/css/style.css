@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* background-body: #202b38;
+    --background: #161f27;
+    --background-alt: #1a242f;
+    --selection: #1c76c5;
+    --text-main: #dbdbdb;
+    --text-bright: #fff;
+    --text-muted: #a9b1ba;
+    --links: #41adff;
+    --focus: #0096bfab;
+    --border: #526980;
+    --code: #ffbe85;
+    --animation-duration: 0.1s;
+    --button-base: #0c151c;
+    --button-hover: #040a0f;
+    --scrollbar-thumb: var(--button-hover);
+    --scrollbar-thumb-hover: rgb(0, 0, 0);
+    --form-placeholder: #a9a9a9;
+    --form-text: #fff;
+    --variable: #d941e2;
+    --highlight: #efdb43; */
+
+li{
+    color: #202b38;
+    color: #161f27;
+    color: #1a242f;
+    color: #1c76c5;
+    color: #dbdbdb;
+    color: #fff;
+    color: #a9b1ba;
+    color: #41adff;
+    color: #526980;
+    color: #ffbe85;
+    color: #0c151c;
+    color: #040a0f;
+    color: #202b38;
+    color: #a9a9a9;
+    color: #fff;
+    color: #d941e2;
+    color: #efdb43;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+    color: greenyellow;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #202b38;
+}
+span{
+    color: #fff;
+}
+h2{
+    color: #fff;
+    text-align: center;
+
+}
+.form-navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #1a242f;
+    padding: 10px;
+    margin-right: 15px;
+    width: 100%;
+    gap: 10px;
+}
+.form-ingresar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #1a242f;
+    padding: 10px;
+    width: 355px;
+}
+.btn-navBar{
+    padding: 5px 12px;
+    background-color: #0c151c;
+    color: #efdb43;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-right: 15px;
+    &&:hover{
+        background-color: #202b38;
+        transition: 0.4s;
+    }
+}
+.btn-ingreso{
+    padding: 5px 12px;
+    background-color: #0c151c;
+    color: #efdb43;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    &&:hover{
+        background-color: #202b38;
+        transition: 0.4s;
+    }
+}
+
+.input-navBar{
+    padding: 5px;
+    background-color: #202b38;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #1c76c5;
+
+}
+.div-compras{
+    background-color: #1a242f;
+    padding: 10px;
+    width: 355px;
+    
+}
+.ul-compras{
+    background-color: #202b38;
+    padding: 3px;
+  height: 72vh;
+  overflow: auto;
+}
+.li-compras{
+    padding: 5px;
+    background-color: #202b38;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #1c76c5;
+    list-style: none;
+    width: 300px;
+    cursor: pointer;
+}
+.div-li-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 3px;
+}
+.tachada {
+    background-color: #ff4141c7;
+    text-decoration: line-through;
+  }
+.btn-x{
+    width: 30px;
+    height: 30px;
+    background-color: #ff4141;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}

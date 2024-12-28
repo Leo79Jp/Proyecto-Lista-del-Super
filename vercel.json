@@ -2,7 +2,7 @@
     "version":2,
     "builds": [
         {
-            "src": "./src/main.jsx",
+            "src": "./src/App.jsx",
             "use": "@vercel/node"
         }
     ],
@@ -13,3 +13,4 @@
         }
     ]
 }
+Proyecto Lista del Super\src\main.jsx

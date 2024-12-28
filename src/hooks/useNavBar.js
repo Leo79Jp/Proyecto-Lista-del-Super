@@ -9,7 +9,7 @@ const useNavBar = () => {
   }); 
 
   useEffect(() => {
-    fetch("../datos/usuarios.json")
+    fetch("https://proyecto-lista-del-super-3hpuopb50-leoparodis-projects.vercel.app/../datos/usuarios.json")
       .then((response) => response.json())
       .then((datos) => {
         setUsuarios(datos);

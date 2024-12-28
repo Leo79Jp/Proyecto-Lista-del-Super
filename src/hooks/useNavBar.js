@@ -6,7 +6,7 @@ const useNavBar = () => {
   const [conUsuario, setConUsuario] = useState(() => {
     const storeUsuario = window.localStorage.getItem("user");
     return storeUsuario ? setUsuario(JSON.parse(storeUsuario)) : null;
-  });
+  }); 
 
   useEffect(() => {
     fetch("../public/datos/usuarios.json")

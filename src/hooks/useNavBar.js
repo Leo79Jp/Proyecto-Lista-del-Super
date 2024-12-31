@@ -9,7 +9,7 @@ const useNavBar = () => {
   }); 
 
   useEffect(() => {
-    fetch("../datos/usuarios.json")
+    fetch("../../public/datos/usuarios.json")
       .then((response) => response.json())
       .then((datos) => {
         setUsuarios(datos);
@@ -17,7 +17,7 @@ const useNavBar = () => {
   }, []);
 
   useEffect(() => {
-    fetch("../datos/listaCompras.json")
+    fetch("../../public/datos/listaCompras.json")
 
       .then((response) => response.json())
       .then((datos2) => {

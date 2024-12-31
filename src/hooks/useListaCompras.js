@@ -7,7 +7,7 @@ const useListaCompras = () => {
     return storeLista ? setLista(JSON.parse(storeLista)) : null;
   });
   useEffect(() => {
-    fetch("../datos/listaCompras.json")
+    fetch("../../public/datos/listaCompras.json")
       .then((response) => response.json())
       .then((datos2) => {
         return lista.length > 0 ? null : setLista(datos2);

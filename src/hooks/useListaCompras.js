@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import swal from "sweetalert";
-import axios from "axios"
+// import axios from "axios"
 
 const useListaCompras = () => {
   const [lista, setLista] = useState([]);
@@ -9,7 +9,7 @@ const useListaCompras = () => {
     return storeLista ? setLista(JSON.parse(storeLista)) : null;
   });
   useEffect(() => {
-    axios("../../public/listaCompras.json")
+    fetch("../../public/listaCompras.json")
       .then((response) => response.json())
       .then((datos2) => {
         return lista.length > 0 ? null : setLista(datos2);

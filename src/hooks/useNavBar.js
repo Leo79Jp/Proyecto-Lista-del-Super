@@ -1,5 +1,6 @@
+// import axios from "axios";
 import { useEffect, useState } from "react";
-import axios from "axios"
+// import axios from "axios"
 
 const useNavBar = () => {
   const [listaInicial, setListaInicial] = useState([]);
@@ -11,7 +12,7 @@ const useNavBar = () => {
   }); 
 
   useEffect(() => {
-    axios("../../public/usuarios.json")
+    fetch('../../public/usuarios.json')
       .then((response) => response.json())
       .then((datos) => {
         setUsuarios(datos);
@@ -20,7 +21,7 @@ const useNavBar = () => {
   }, []);
 
   useEffect(() => {
-    axios("../../public/listaCompras.json")
+    fetch("../../public/listaCompras.json")
 
       .then((response) => response.json())
       .then((datos2) => {

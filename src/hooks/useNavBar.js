@@ -9,7 +9,9 @@ const useNavBar = () => {
   }); 
 
   useEffect(() => {
-    fetch("../datos/usuarios.json")
+    // fetch("../datos/usuarios.json")
+    fetch("https://proyecto-lista-del-super-fxbk5tekw-leoparodis-projects.vercel.app/datos/usuarios.json")
+
       .then((response) => response.text())
       .then((datos) => {
         setUsuarios(datos);
@@ -17,7 +19,9 @@ const useNavBar = () => {
   }, []);
 
   useEffect(() => {
-    fetch("../datos/listaCompras.json")
+    // fetch("../datos/listaCompras.json")
+    fetch("https://proyecto-lista-del-super-fxbk5tekw-leoparodis-projects.vercel.app/datos/listaCompras.json")
+
       .then((response) => response.text())
       .then((datos2) => {
         setListaInicial(datos2);

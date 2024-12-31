@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import swal from "sweetalert";
+import axios from "axios"
+
 const useListaCompras = () => {
   const [lista, setLista] = useState([]);
   const [conLista, setConLista] = useState(() => {
@@ -7,11 +9,13 @@ const useListaCompras = () => {
     return storeLista ? setLista(JSON.parse(storeLista)) : null;
   });
   useEffect(() => {
-    fetch("../../public/listaCompras.json")
+    axios("../../public/listaCompras.json")
       .then((response) => response.json())
       .then((datos2) => {
         return lista.length > 0 ? null : setLista(datos2);
-      });
+      })
+      .catch(error => console.error({error}))
+
   }, [lista]);
 
   const addProducto = ({ nuevoProducto }) => {

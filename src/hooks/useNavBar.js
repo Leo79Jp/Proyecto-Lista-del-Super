@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import axios from "axios"
+
 const useNavBar = () => {
   const [listaInicial, setListaInicial] = useState([]);
   const [usuarios, setUsuarios] = useState(null);
@@ -9,20 +11,22 @@ const useNavBar = () => {
   }); 
 
   useEffect(() => {
-    fetch("../../public/usuarios.json")
+    axios("../../public/usuarios.json")
       .then((response) => response.json())
       .then((datos) => {
         setUsuarios(datos);
-      });
+      })
+      .catch(error => console.error({error}))
   }, []);
 
   useEffect(() => {
-    fetch("../../public/listaCompras.json")
+    axios("../../public/listaCompras.json")
 
       .then((response) => response.json())
       .then((datos2) => {
         setListaInicial(datos2);
-      });
+      })
+      .catch(error => console.error({error}))
   }, []);
 
   const login = (nombre, password) => {

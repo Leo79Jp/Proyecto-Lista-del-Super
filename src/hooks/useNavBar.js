@@ -10,7 +10,7 @@ const useNavBar = () => {
 
   useEffect(() => {
     fetch("../datos/usuarios.json")
-      .then((response) => response.json())
+      .then((response) => response.text())
       .then((datos) => {
         setUsuarios(datos);
       });
@@ -18,7 +18,7 @@ const useNavBar = () => {
 
   useEffect(() => {
     fetch("../datos/listaCompras.json")
-      .then((response) => response.json())
+      .then((response) => response.text())
       .then((datos2) => {
         setListaInicial(datos2);
       });

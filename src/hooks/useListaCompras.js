@@ -8,7 +8,7 @@ const useListaCompras = () => {
   });
   useEffect(() => {
     fetch("../datos/listaCompras.json")
-      .then((response) => response.text())
+      .then((response) => response.json())
       .then((datos2) => {
         return lista.length > 0 ? null : setLista(datos2);
       });

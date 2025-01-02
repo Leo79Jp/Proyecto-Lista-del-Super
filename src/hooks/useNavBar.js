@@ -14,7 +14,9 @@ const useNavBar = () => {
   }); 
 
   useEffect(() => {
-    fetch('../../public/usuarios.json')
+    // fetch('../../public/usuarios.json')
+    fetch('https://proyecto-lista-del-super-jl586yf11-leoparodis-projects.vercel.app/public/usuarios.json')
+    
     .then((response) => response.json())
     .then((datos) => {
       setUsuarios(datos);

@@ -5,11 +5,11 @@
             "src": "src/main.jsx",
             "use": "@vercel/node"
         }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "src/main"
+        }
     ]
-    // "routes": [
-    //     {
-    //         "src": "/(.*)",
-    //         "dest": "src/main"
-    //     }
-    // ]
 }

@@ -57,7 +57,7 @@ export default function NavBar() {
         </>
         ) : (  
         <>
-          <span> Bienvenido👋 {usuario.nombre}</span>
+          <span> Bienvenido👋 {usuario}</span>
           <button 
           className="btn-navBar"
           onClick={handleLogout}

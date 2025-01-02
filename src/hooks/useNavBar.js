@@ -1,23 +1,25 @@
-// import axios from "axios";
 import { useEffect, useState } from "react";
-// import axios from "axios"
 
 const useNavBar = () => {
   const [listaInicial, setListaInicial] = useState([]);
   const [usuarios, setUsuarios] = useState(null);
   const [usuario, setUsuario] = useState("");
+
   const [conUsuario, setConUsuario] = useState(() => {
     const storeUsuario = window.localStorage.getItem("user");
-    return storeUsuario ? setUsuario(JSON.parse(storeUsuario)) : null;
+    return storeUsuario 
+    ?  
+      setUsuario(JSON.parse(storeUsuario))
+    : null;
   }); 
 
   useEffect(() => {
     fetch('../../public/usuarios.json')
-      .then((response) => response.json())
-      .then((datos) => {
-        setUsuarios(datos);
-      })
-      .catch(error => console.error({error}))
+    .then((response) => response.json())
+    .then((datos) => {
+      setUsuarios(datos);
+    })
+    .catch(error => console.error({error}))
   }, []);
 
   useEffect(() => {
@@ -35,8 +37,8 @@ const useNavBar = () => {
       (c) => c.nombre === nombre && c.password === password
     );
     if (resultado) {
-      setUsuario(resultado);
-      window.localStorage.setItem("user", JSON.stringify(resultado));
+      setUsuario(nombre);
+      window.localStorage.setItem("user", JSON.stringify(nombre));
       window.localStorage.setItem("lista", JSON.stringify(listaInicial));
     } else {
       alert("EL usuario o la Contraseña son incorrectas!");

@@ -64,6 +64,13 @@ const useListaCompras = () => {
     });
   };
 
+  const resetLogout = () => {
+        const listaReset = [];
+        setLista(listaReset);
+        window.localStorage.setItem("lista", JSON.stringify(listaReset));
+      }  
+  
+
   const liMarcada = (itemObtenido) => {
     const itemTachado = lista.map((item) => {
       if (item.id === itemObtenido) {
@@ -81,6 +88,6 @@ const useListaCompras = () => {
     window.localStorage.setItem("lista", JSON.stringify(listaBorrarItem));
   };
 
-  return { lista, addProducto, reset, liMarcada, btnBorrar };
+  return { lista, addProducto, reset, liMarcada, btnBorrar, resetLogout };
 };
 export default useListaCompras;

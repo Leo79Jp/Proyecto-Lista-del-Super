@@ -5,7 +5,7 @@ import { ListaContext } from "../context/ListaContext";
 
 export default function NavBar() {
   const { usuario, login, logout } = useContext(UsuarioContext);
-  const {  reset } = useContext(ListaContext);
+  const { resetLogout } = useContext(ListaContext);
 
   const [inputUsuario, setInputUsuario] = useState('')
   const [inputPassword, setInputPassword] = useState('')
@@ -26,7 +26,7 @@ export default function NavBar() {
     logout()
     setInputUsuario('')
     setInputPassword('') 
-    reset()
+    resetLogout()
   }
 
   return (

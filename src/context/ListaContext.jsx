@@ -5,10 +5,10 @@ export const ListaContext = createContext();
 
 
 export const ListaProvider = ({ children }) => {
-    const { lista, addProducto, reset, liMarcada, btnBorrar } = useListaCompras();
+    const { lista, addProducto, reset, liMarcada, btnBorrar, resetLogout } = useListaCompras();
 
   return (
-    <ListaContext.Provider value={{ lista, addProducto, reset, liMarcada, btnBorrar }}>
+    <ListaContext.Provider value={{ lista, addProducto, reset, liMarcada, btnBorrar, resetLogout }}>
       {children}
       </ListaContext.Provider>
   );

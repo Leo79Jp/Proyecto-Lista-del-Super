@@ -1,8 +1,23 @@
 import { useEffect, useState } from "react";
+const users = [
+  {
+    "id": 1,
+    "nombre": "Leo",
+    "password": "leopass",
+    "rol": "admin"
+  },
+  {
+    "id": 2,
+    "nombre": "Miri",
+    "password": "miripass",
+    "rol": "admin"
+  }
+
+]
 
 const useNavBar = () => {
   const [listaInicial, setListaInicial] = useState([]);
-  const [usuarios, setUsuarios] = useState(null);
+  const [usuarios, setUsuarios] = useState(users);
   const [usuario, setUsuario] = useState("");
 
   const [conUsuario, setConUsuario] = useState(() => {
@@ -12,15 +27,15 @@ const useNavBar = () => {
       setUsuario(JSON.parse(storeUsuario))
     : null;
   }); 
-  useEffect(() => {
-        // fetch("../../public/usuarios.json")
-    fetch('https://66fb28368583ac93b40b0277.mockapi.io/usuarios')
-    .then((response) => response.json())
-    .then((datos) => {
-      setUsuarios(datos);
-    })
-    .catch(error => console.error({error}))
-  }, []);
+  // useEffect(() => {
+  //       // fetch("../../public/usuarios.json")
+  //   fetch('https://66fb28368583ac93b40b0277.mockapi.io/usuarios')
+  //   .then((response) => response.json())
+  //   .then((datos) => {
+  //     setUsuarios(datos);
+  //   })
+  //   .catch(error => console.error({error}))
+  // }, []);
 
   useEffect(() => {
         // fetch("../../public/listaCompras.json")

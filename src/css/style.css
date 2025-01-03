@@ -119,8 +119,15 @@ h2{
     color: #fff;
     border-radius: 3px;
     border: 1px solid #1c76c5;
-
 }
+.input-ingreso{
+    padding: 5px;
+    background-color: #202b38;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #1c76c5;
+}
+
 .div-compras{
     background-color: #1a242f;
     padding: 10px;
@@ -130,8 +137,8 @@ h2{
 .ul-compras{
     background-color: #202b38;
     padding: 3px;
-  height: 72vh;
-  overflow: auto;
+    height: 67vh;
+    overflow: auto;
 }
 .li-compras{
     padding: 5px;

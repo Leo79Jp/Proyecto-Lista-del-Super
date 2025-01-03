@@ -24,7 +24,7 @@ export default function IngresoArt() {
     <form>
       <div className="form-ingresar">
         <input
-          className="input-navBar"
+          className="input-ingreso"
           type="text"
           placeholder="Ingresar Articulo"
           value={nuevoProducto}

@@ -12,9 +12,9 @@ const useNavBar = () => {
       setUsuario(JSON.parse(storeUsuario))
     : null;
   }); 
-
   useEffect(() => {
-    fetch('../../public/usuarios.json')    
+        // fetch("../../public/usuarios.json")
+    fetch('https://66fb28368583ac93b40b0277.mockapi.io/usuarios')
     .then((response) => response.json())
     .then((datos) => {
       setUsuarios(datos);
@@ -23,15 +23,14 @@ const useNavBar = () => {
   }, []);
 
   useEffect(() => {
-    fetch("../../public/listaCompras.json")
-
+        // fetch("../../public/listaCompras.json")
+    fetch('https://66fb28368583ac93b40b0277.mockapi.io/lista')
       .then((response) => response.json())
       .then((datos2) => {
         setListaInicial(datos2);
       })
-      .catch(error => console.error({error}))
+      // .catch(error => console.error({error}))
   }, []);
-
   const login = (nombre, password) => {
     const resultado = usuarios.find(
       (c) => c.nombre === nombre && c.password === password

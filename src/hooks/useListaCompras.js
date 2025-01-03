@@ -9,12 +9,14 @@ const useListaCompras = () => {
     return storeLista ? setLista(JSON.parse(storeLista)) : null;
   });
   useEffect(() => {
-    fetch("../../public/listaCompras.json")
+    // fetch("../../public/listaCompras.json")
+    fetch("https://66fb28368583ac93b40b0277.mockapi.io/lista")
+
       .then((response) => response.json())
       .then((datos2) => {
         return lista.length > 0 ? null : setLista(datos2);
       })
-      .catch(error => console.error({error}))
+      // .catch(error => console.error({error}))
 
   }, [lista]);
 

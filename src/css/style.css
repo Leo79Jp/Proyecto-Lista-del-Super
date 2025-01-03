@@ -163,14 +163,14 @@ h2{
     border-radius: 3px;
     cursor: pointer;
 }
-@media (max-width: 391PX) {
+@media (max-width: 361PX) {
     .btn-navBar{
         padding: 5px 7px;
     }
     
     .input-navBar{
         padding: 5px 5px;
-        width: 120px;
+        width: 100px;
     }
     
   }
